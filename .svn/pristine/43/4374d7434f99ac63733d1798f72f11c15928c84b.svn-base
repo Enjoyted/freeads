@@ -1,0 +1,230 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2013-10-25 00:28:49 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected '->' (T_OBJECT_OPERATOR) ~ APPPATH\classes\Controller\annonces.php [ 12 ] in file:line
+2013-10-25 00:28:49 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2013-10-25 00:28:59 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'DESC' in 'order clause' [ SELECT * FROM `users` JOIN `annonces` ON (`users`.`id` = `annonces`.`posted_by`) ORDER BY `DESC` ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 00:28:59 --- DEBUG: #0 C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT * FROM `...', false, Array)
+#1 C:\wamp\www\FreeAds\application\classes\Controller\annonces.php(12): Kohana_Database_Query->execute()
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Annonces->action_list()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Annonces))
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 00:29:15 --- CRITICAL: Database_Exception [ 1052 ]: Column 'id' in order clause is ambiguous [ SELECT * FROM `users` JOIN `annonces` ON (`users`.`id` = `annonces`.`posted_by`) ORDER BY `id` DESC ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 00:29:15 --- DEBUG: #0 C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT * FROM `...', false, Array)
+#1 C:\wamp\www\FreeAds\application\classes\Controller\annonces.php(12): Kohana_Database_Query->execute()
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Annonces->action_list()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Annonces))
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#8 {main} in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 00:46:08 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: query ~ APPPATH\views\pages\annonceslist.php [ 4 ] in C:\wamp\www\FreeAds\application\views\pages\annonceslist.php:4
+2013-10-25 00:46:08 --- DEBUG: #0 C:\wamp\www\FreeAds\application\views\pages\annonceslist.php(4): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\wamp\www\Fre...', 4, Array)
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 C:\wamp\www\FreeAds\application\views\template.php(136): Kohana_View->__toString()
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 C:\wamp\www\FreeAds\application\classes\Controller\demo.php(50): Kohana_Controller_Template->after()
+#9 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(87): Controller_Demo->after()
+#10 [internal function]: Kohana_Controller->execute()
+#11 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Users))
+#12 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#13 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#14 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#15 {main} in C:\wamp\www\FreeAds\application\views\pages\annonceslist.php:4
+2013-10-25 00:46:32 --- CRITICAL: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH\views\pages\annonceslist.php [ 4 ] in C:\wamp\www\FreeAds\application\views\pages\annonceslist.php:4
+2013-10-25 00:46:32 --- DEBUG: #0 C:\wamp\www\FreeAds\application\views\pages\annonceslist.php(4): Kohana_Core::error_handler(2, 'Invalid argumen...', 'C:\wamp\www\Fre...', 4, Array)
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 C:\wamp\www\FreeAds\application\views\template.php(136): Kohana_View->__toString()
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 C:\wamp\www\FreeAds\application\classes\Controller\demo.php(50): Kohana_Controller_Template->after()
+#9 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(87): Controller_Demo->after()
+#10 [internal function]: Kohana_Controller->execute()
+#11 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Users))
+#12 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#13 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#14 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#15 {main} in C:\wamp\www\FreeAds\application\views\pages\annonceslist.php:4
+2013-10-25 00:47:26 --- CRITICAL: View_Exception [ 0 ]: The requested view users/profil could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in C:\wamp\www\FreeAds\system\classes\Kohana\View.php:137
+2013-10-25 00:47:26 --- DEBUG: #0 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(137): Kohana_View->set_filename('users/profil')
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(30): Kohana_View->__construct('users/profil', NULL)
+#2 C:\wamp\www\FreeAds\application\classes\Controller\users.php(131): Kohana_View::factory('users/profil')
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Users->action_sendMail()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Users))
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\FreeAds\system\classes\Kohana\View.php:137
+2013-10-25 09:36:54 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: value ~ APPPATH\classes\Controller\users.php [ 132 ] in C:\wamp\www\FreeAds\application\classes\Controller\users.php:132
+2013-10-25 09:36:54 --- DEBUG: #0 C:\wamp\www\FreeAds\application\classes\Controller\users.php(132): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\wamp\www\Fre...', 132, Array)
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Users->action_sendMail()
+#2 [internal function]: Kohana_Controller->execute()
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Users))
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#7 {main} in C:\wamp\www\FreeAds\application\classes\Controller\users.php:132
+2013-10-25 09:37:32 --- CRITICAL: ErrorException [ 2 ]: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() ~ APPPATH\classes\Controller\users.php [ 140 ] in file:line
+2013-10-25 09:37:32 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'mail(): Failed ...', 'C:\wamp\www\Fre...', 140, Array)
+#1 C:\wamp\www\FreeAds\application\classes\Controller\users.php(140): mail('', 'Le mail de la m...', 'Le mail qui nik...', 'From : enjoyhou...')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Users->action_sendMail()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Users))
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#8 {main} in file:line
+2013-10-25 09:39:55 --- CRITICAL: ErrorException [ 2 ]: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() ~ APPPATH\classes\Controller\users.php [ 140 ] in file:line
+2013-10-25 09:39:55 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'mail(): Failed ...', 'C:\wamp\www\Fre...', 140, Array)
+#1 C:\wamp\www\FreeAds\application\classes\Controller\users.php(140): mail('', 'lolol', 'sqdsqdqssqd', 'From : enjoyhou...')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Users->action_sendMail()
+#3 [internal function]: Kohana_Controller->execute()
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Users))
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#8 {main} in file:line
+2013-10-25 10:25:03 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: departements ~ APPPATH\views\pages\search.php [ 22 ] in C:\wamp\www\FreeAds\application\views\pages\search.php:22
+2013-10-25 10:25:03 --- DEBUG: #0 C:\wamp\www\FreeAds\application\views\pages\search.php(22): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\wamp\www\Fre...', 22, Array)
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 C:\wamp\www\FreeAds\application\views\template.php(136): Kohana_View->__toString()
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 C:\wamp\www\FreeAds\application\classes\Controller\demo.php(50): Kohana_Controller_Template->after()
+#9 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(87): Controller_Demo->after()
+#10 [internal function]: Kohana_Controller->execute()
+#11 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#12 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#13 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#14 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#15 {main} in C:\wamp\www\FreeAds\application\views\pages\search.php:22
+2013-10-25 10:25:44 --- CRITICAL: ErrorException [ 2 ]: Invalid argument supplied for foreach() ~ APPPATH\views\pages\search.php [ 22 ] in C:\wamp\www\FreeAds\application\views\pages\search.php:22
+2013-10-25 10:25:44 --- DEBUG: #0 C:\wamp\www\FreeAds\application\views\pages\search.php(22): Kohana_Core::error_handler(2, 'Invalid argumen...', 'C:\wamp\www\Fre...', 22, Array)
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 C:\wamp\www\FreeAds\application\views\template.php(136): Kohana_View->__toString()
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 C:\wamp\www\FreeAds\application\classes\Controller\demo.php(50): Kohana_Controller_Template->after()
+#9 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(87): Controller_Demo->after()
+#10 [internal function]: Kohana_Controller->execute()
+#11 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#12 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#13 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#14 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#15 {main} in C:\wamp\www\FreeAds\application\views\pages\search.php:22
+2013-10-25 10:48:31 --- CRITICAL: ErrorException [ 1 ]: Class 'Model_offer' not found ~ MODPATH\orm\classes\Kohana\ORM.php [ 46 ] in file:line
+2013-10-25 10:48:31 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2013-10-25 10:51:30 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'departements' in 'where clause' [ SELECT `annonce`.`id` AS `id`, `annonce`.`titre` AS `titre`, `annonce`.`prix` AS `prix`, `annonce`.`content` AS `content`, `annonce`.`categorie` AS `categorie`, `annonce`.`region` AS `region`, `annonce`.`posted_by` AS `posted_by`, `annonce`.`created` AS `created` FROM `annonces` AS `annonce` WHERE (`titre` LIKE '%Ted%' AND `departements` LIKE '%03 - Allier%' AND `categories` LIKE '%IMMOBILIER%') ORDER BY `created` DESC ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 10:51:30 --- DEBUG: #0 C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `annonce...', 'Model_Annonce', Array)
+#1 C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 C:\wamp\www\FreeAds\application\classes\Controller\searchs.php(32): Kohana_ORM->find_all()
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Searchs->action_search()
+#5 [internal function]: Kohana_Controller->execute()
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#10 {main} in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 11:48:47 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'departements' in 'where clause' [ SELECT `annonce`.`id` AS `id`, `annonce`.`titre` AS `titre`, `annonce`.`prix` AS `prix`, `annonce`.`content` AS `content`, `annonce`.`categorie` AS `categorie`, `annonce`.`region` AS `region`, `annonce`.`posted_by` AS `posted_by`, `annonce`.`created` AS `created` FROM `annonces` AS `annonce` WHERE (`titre` LIKE '%Susu%' AND `departements` LIKE '%03 - Allier%' AND `categories` LIKE '%MAISON%') ORDER BY `created` DESC ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 11:48:47 --- DEBUG: #0 C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `annonce...', 'Model_Annonce', Array)
+#1 C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 C:\wamp\www\FreeAds\application\classes\Controller\searchs.php(32): Kohana_ORM->find_all()
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Searchs->action_search()
+#5 [internal function]: Kohana_Controller->execute()
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#10 {main} in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 11:51:07 --- CRITICAL: Database_Exception [ 1054 ]: Unknown column 'departements' in 'where clause' [ SELECT `annonce`.`id` AS `id`, `annonce`.`titre` AS `titre`, `annonce`.`prix` AS `prix`, `annonce`.`content` AS `content`, `annonce`.`categorie` AS `categorie`, `annonce`.`region` AS `region`, `annonce`.`posted_by` AS `posted_by`, `annonce`.`created` AS `created` FROM `annonces` AS `annonce` WHERE (`titre` LIKE '%Susu%' AND `departements` LIKE '%03 - Allier%' AND `categories` LIKE '%MAISON%') ORDER BY `created` DESC ] ~ MODPATH\database\classes\Kohana\Database\MySQL.php [ 194 ] in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 11:51:07 --- DEBUG: #0 C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php(251): Kohana_Database_MySQL->query(1, 'SELECT `annonce...', 'Model_Annonce', Array)
+#1 C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php(1063): Kohana_Database_Query->execute(Object(Database_MySQL))
+#2 C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php(1004): Kohana_ORM->_load_result(true)
+#3 C:\wamp\www\FreeAds\application\classes\Controller\searchs.php(32): Kohana_ORM->find_all()
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Searchs->action_search()
+#5 [internal function]: Kohana_Controller->execute()
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#10 {main} in C:\wamp\www\FreeAds\modules\database\classes\Kohana\Database\Query.php:251
+2013-10-25 11:59:21 --- CRITICAL: View_Exception [ 0 ]: The requested view search/resultsearch could not be found ~ SYSPATH\classes\Kohana\View.php [ 257 ] in C:\wamp\www\FreeAds\system\classes\Kohana\View.php:137
+2013-10-25 11:59:21 --- DEBUG: #0 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(137): Kohana_View->set_filename('search/resultse...')
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(30): Kohana_View->__construct('search/resultse...', NULL)
+#2 C:\wamp\www\FreeAds\application\classes\Controller\searchs.php(36): Kohana_View::factory('search/resultse...')
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(84): Controller_Searchs->action_search()
+#4 [internal function]: Kohana_Controller->execute()
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#9 {main} in C:\wamp\www\FreeAds\system\classes\Kohana\View.php:137
+2013-10-25 12:06:14 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: search ~ APPPATH\views\pages\resultsearch.php [ 3 ] in C:\wamp\www\FreeAds\application\views\pages\resultsearch.php:3
+2013-10-25 12:06:14 --- DEBUG: #0 C:\wamp\www\FreeAds\application\views\pages\resultsearch.php(3): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\wamp\www\Fre...', 3, Array)
+#1 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 C:\wamp\www\FreeAds\application\views\template.php(136): Kohana_View->__toString()
+#5 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 C:\wamp\www\FreeAds\application\classes\Controller\demo.php(50): Kohana_Controller_Template->after()
+#9 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(87): Controller_Demo->after()
+#10 [internal function]: Kohana_Controller->execute()
+#11 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#12 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#13 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#14 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#15 {main} in C:\wamp\www\FreeAds\application\views\pages\resultsearch.php:3
+2013-10-25 12:38:16 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected 'array' (T_ARRAY) ~ APPPATH\views\pages\resultsearch.php [ 2 ] in file:line
+2013-10-25 12:38:16 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2013-10-25 12:43:39 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected 'titre' (T_STRING), expecting ',' or ';' ~ APPPATH\views\pages\resultsearch.php [ 20 ] in file:line
+2013-10-25 12:43:39 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2013-10-25 12:44:35 --- CRITICAL: ErrorException [ 4 ]: syntax error, unexpected 'titre' (T_STRING), expecting ',' or ';' ~ APPPATH\views\pages\resultsearch.php [ 20 ] in file:line
+2013-10-25 12:44:35 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2013-10-25 12:46:39 --- CRITICAL: ErrorException [ 1 ]: Cannot use object of type Model_Annonce as array ~ APPPATH\views\pages\resultsearch.php [ 20 ] in file:line
+2013-10-25 12:46:39 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2013-10-25 12:47:26 --- CRITICAL: Kohana_Exception [ 0 ]: The username property does not exist in the Model_Annonce class ~ MODPATH\orm\classes\Kohana\ORM.php [ 687 ] in C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php:603
+2013-10-25 12:47:26 --- DEBUG: #0 C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php(603): Kohana_ORM->get('username')
+#1 C:\wamp\www\FreeAds\application\views\pages\resultsearch.php(25): Kohana_ORM->__get('username')
+#2 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#3 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#4 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(228): Kohana_View->render()
+#5 C:\wamp\www\FreeAds\application\views\template.php(136): Kohana_View->__toString()
+#6 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(61): include('C:\wamp\www\Fre...')
+#7 C:\wamp\www\FreeAds\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\wamp\www\Fre...', Array)
+#8 C:\wamp\www\FreeAds\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#9 C:\wamp\www\FreeAds\application\classes\Controller\demo.php(50): Kohana_Controller_Template->after()
+#10 C:\wamp\www\FreeAds\system\classes\Kohana\Controller.php(87): Controller_Demo->after()
+#11 [internal function]: Kohana_Controller->execute()
+#12 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Searchs))
+#13 C:\wamp\www\FreeAds\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#14 C:\wamp\www\FreeAds\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#15 C:\wamp\www\FreeAds\index.php(118): Kohana_Request->execute()
+#16 {main} in C:\wamp\www\FreeAds\modules\orm\classes\Kohana\ORM.php:603
